@@ -136,6 +136,7 @@ response can be:
 
 ## Suggestions
 1. A real DB can be used instead of h2
-2. Swagger can be implemented(except in prod profile)
-2. CI/CD pipelines
-3. A static code analyzer tool can be use
+2. A database migration tool can be used
+3. Swagger can be implemented(except in prod profile)
+4. CI/CD pipelines
+5. A static code analyzer tool can be use
