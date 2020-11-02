@@ -127,7 +127,6 @@ response can be:
        }
       ```                 
 
-
 ## Notes
 1.  For getting better performance we can handle requests asynchronously in the future, 
    With this improvement, We would get *update* *left* and *right* requests for the same comparison at the same time. In this situation
