@@ -1,0 +1,10 @@
+
+version: '3'
+
+services:
+  waes-assignment:
+    build: .
+    image: waes/waes-assignment
+    container_name: waes_assignment
+    ports:
+      - "8080:8080"
