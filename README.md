@@ -7,8 +7,6 @@ This project aims to compare two base64 encoded binary data via http endpoints.
 
 ## Getting Started
 
-To run this application, 
-
 **1. Run as Docker container**
 
 you'll need [Docker](https://docs.docker.com/get-docker/) installed in your computer. From your command line in project directory:
