@@ -1,0 +1,11 @@
+/home/codespace/workspace/waes-assignment/src/test/java/org/miya/waes/service/Base64ComparisonServiceImplTest.java
+/home/codespace/workspace/waes-assignment/src/test/java/org/miya/waes/entity/Base64ComparisonTest.java
+/home/codespace/workspace/waes-assignment/src/test/java/org/miya/waes/service/Base64DiffServiceImplTest.java
+/home/codespace/workspace/waes-assignment/src/test/java/org/miya/waes/controller/Base64ComparisonControllerTest.java
+/home/codespace/workspace/waes-assignment/src/test/java/org/miya/waes/dto/Base64ComparisonDTOTest.java
+/home/codespace/workspace/waes-assignment/src/test/java/org/miya/waes/dto/Base64ComparisonDTOMapperTest.java
+/home/codespace/workspace/waes-assignment/src/test/java/org/miya/waes/dao/Base64ComparisonRepositoryIntegrationTest.java
+/home/codespace/workspace/waes-assignment/src/test/java/org/miya/waes/WaesAssignmentApplicationTests.java
+/home/codespace/workspace/waes-assignment/src/test/java/org/miya/waes/exception/ExceptionResponseTest.java
+/home/codespace/workspace/waes-assignment/src/test/java/org/miya/waes/dto/Base64DTOTest.java
+/home/codespace/workspace/waes-assignment/src/test/java/org/miya/waes/controller/Base64ComparisonControllerIntegrationTest.java

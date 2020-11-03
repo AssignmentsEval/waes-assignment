@@ -1,0 +1,11 @@
+org/miya/waes/service/Base64ComparisonServiceImplTest.class
+org/miya/waes/dto/Base64ComparisonDTOTest.class
+org/miya/waes/dto/Base64ComparisonDTOMapperTest.class
+org/miya/waes/service/Base64DiffServiceImplTest.class
+org/miya/waes/controller/Base64ComparisonControllerTest.class
+org/miya/waes/dto/Base64DTOTest.class
+org/miya/waes/controller/Base64ComparisonControllerIntegrationTest.class
+org/miya/waes/dao/Base64ComparisonRepositoryIntegrationTest.class
+org/miya/waes/exception/ExceptionResponseTest.class
+org/miya/waes/entity/Base64ComparisonTest.class
+org/miya/waes/WaesAssignmentApplicationTests.class

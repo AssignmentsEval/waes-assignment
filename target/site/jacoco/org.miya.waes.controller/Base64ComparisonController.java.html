@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Base64ComparisonController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">waes-assignment</a> &gt; <a href="index.source.html" class="el_package">org.miya.waes.controller</a> &gt; <span class="el_source">Base64ComparisonController.java</span></div><h1>Base64ComparisonController.java</h1><pre class="source lang-java linenums">package org.miya.waes.controller;
+
+import org.miya.waes.dto.Base64ComparisonDTO;
+import org.miya.waes.dto.Base64DTO;
+import org.miya.waes.dto.DiffResponseDTO;
+import org.miya.waes.entity.Base64Comparison;
+import org.miya.waes.service.ComparisonService;
+import org.miya.waes.service.DiffService;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+
+import static org.miya.waes.dto.Base64ComparisonDTOMapper.convertToDTO;
+import static org.springframework.http.HttpStatus.CREATED;
+
+/**
+ * RESTful web service endpoints for a comparision that consist of two data in base64 format
+ *
+ * @author Yasin Kızılkaya
+ */
+
+@RestController
+@RequestMapping(&quot;v1/diff&quot;)
+public class Base64ComparisonController {
+
+    private final ComparisonService comparisonService;
+    private final DiffService diffService;
+
+<span class="fc" id="L29">    public Base64ComparisonController(ComparisonService comparisonService, DiffService diffService) {</span>
+<span class="fc" id="L30">        this.comparisonService = comparisonService;</span>
+<span class="fc" id="L31">        this.diffService = diffService;</span>
+<span class="fc" id="L32">    }</span>
+
+    @PostMapping(&quot;{id}/left&quot;)
+    @ResponseStatus(CREATED)
+    public Base64ComparisonDTO updateLeftSide(@PathVariable Long id, @Valid @RequestBody Base64DTO base64DTO) {
+<span class="nc" id="L37">        Base64Comparison comparision = comparisonService.updateLeftSide(id, base64DTO.getData());</span>
+<span class="nc" id="L38">        return convertToDTO(comparision);</span>
+    }
+
+    @PostMapping(&quot;{id}/right&quot;)
+    @ResponseStatus(CREATED)
+    public Base64ComparisonDTO updateRightSide(@PathVariable Long id, @Valid @RequestBody Base64DTO base64DTO) {
+<span class="nc" id="L44">        Base64Comparison comparision = comparisonService.updateRightSide(id, base64DTO.getData());</span>
+<span class="nc" id="L45">        return convertToDTO(comparision);</span>
+    }
+
+    @GetMapping(&quot;{id}&quot;)
+    public DiffResponseDTO getDiff(@PathVariable Long id) {
+<span class="nc" id="L50">        Base64Comparison base64Comparison = comparisonService.getComparision(id);</span>
+
+<span class="nc" id="L52">        return diffService.getDiff(base64Comparison.getLeftSide(), base64Comparison.getRightSide());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
